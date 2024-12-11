@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun TaskItem(
-    task: Task, // Ahora pasamos la tarea completa
+    task: Task, 
     onClose: (task: Task) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -31,7 +31,7 @@ fun TaskItem(
             checked = checkedState.value,
             onCheckedChange = { checked ->
                 checkedState.value = checked
-                task.checked = checked // Cambiar el estado de la tarea
+                task.checked = checked 
             }
         )
         IconButton(onClick = { onClose(task) }) { // Ahora pasamos la tarea completa al onClose
