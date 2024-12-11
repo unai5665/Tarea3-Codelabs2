@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 private fun getWellnessTasks() = List(30) { i -> Task(i, "Task # $i") }
 
 class EjemploViewModel : ViewModel() {
-    private val _tasks = getWellnessTasks().toMutableStateList() // Utilizamos un estado mutable
+    private val _tasks = getWellnessTasks().toMutableStateList() 
     val tasks: List<Task> get() = _tasks
 
     fun remove(item:Task) {
