@@ -34,7 +34,7 @@ fun TaskItem(
                 task.checked = checked 
             }
         )
-        IconButton(onClick = { onClose(task) }) { // Ahora pasamos la tarea completa al onClose
+        IconButton(onClick = { onClose(task) }) { 
             Icon(Icons.Filled.Close, contentDescription = "Close")
         }
     }
