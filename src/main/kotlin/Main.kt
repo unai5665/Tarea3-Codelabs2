@@ -13,9 +13,9 @@ fun App(viewModel: EjemploViewModel) {
     MaterialTheme {
         Surface {
             Column {
-                Screen() // Aquí no es necesario pasar el viewModel a Screen si no lo usa
+                Screen() 
                 TaskList(
-                    listaItems = viewModel.tasks, // Pasamos la lista de tareas desde el ViewModel
+                    listaItems = viewModel.tasks,
                     onCheckedTask = { task, checked ->
                         viewModel.changeTaskCheked(task, checked)
                     },
@@ -29,7 +29,7 @@ fun App(viewModel: EjemploViewModel) {
 }
 
 fun main() = application {
-    val viewModel = EjemploViewModel() // Instanciamos el ViewModel
+    val viewModel = EjemploViewModel() 
     Window(onCloseRequest = ::exitApplication) {
         App(viewModel) // Pasamos el ViewModel a la App
     }
